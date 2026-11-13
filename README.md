@@ -1,6 +1,6 @@
-Nom : YALCIN COLLINS
-Prénom :Erol
-URL Netlify : https://zippy-blancmange-d76231.netlify.app/
+Nom :
+Prénom :
+URL Netlify :
 
 État initial : le bouton 🍔 ne fait rien, et la <nav> s'affiche en permanence sous le bouton (en double). On cherche à mettre en place un menu avec `popover`.
 
