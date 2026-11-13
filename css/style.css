@@ -1,1 +1,80 @@
-/* code css à faire */
+/* --- menu (popover plein écran) ------------------------------------------ */
+/* Le navigateur positionne déjà le popover à l'écran (position: fixed; inset: 0).
+   On l'étire sur toute la page sans ajouter de positionnement. */
+.menu {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 4rem 1.5rem 1.5rem;
+  background: #f4f4f4;
+  opacity: 0;
+  transition: 400ms allow-discrete;
+}
+
+/* Le menu devient opaque quand le popover est ouvert. */
+.menu:popover-open {
+  opacity: 1;
+}
+
+/* Définit l'état de départ de la transition à l'ouverture, même si le menu
+   était auparavant masqué avec display: none. */
+@starting-style {
+  .menu:popover-open {
+    opacity: 0;
+  }
+}
+
+/* Empêche le défilement de la page derrière le menu ouvert.
+   :has() permet à html de réagir à l'état de son descendant. */
+html:has(.menu:popover-open) {
+  overflow: hidden;
+}
+
+/* Le curseur indique que les boutons burger sont cliquables. */
+.burger {
+  cursor: pointer;
+}
+
+/* Positionne le bouton de fermeture dans le coin supérieur droit du menu. */
+.menu__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Au début de l'ouverture, le bouton est dans sa position initiale. */
+@starting-style {
+  .menu:popover-open .burger--close {
+    transform: none;
+  }
+}
+
+/* Le bouton de fermeture tourne à l'ouverture du menu. */
+.menu:popover-open .burger--close {
+  transform: rotate(90deg);
+  transition: 400ms;
+}
+
+/* Mise en forme de la liste de navigation. */
+.menu__list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__link {
+  color: #111;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* Respecte la préférence système pour limiter les animations. */
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .menu .burger--close {
+    transition: none;
+  }
+}
