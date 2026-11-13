@@ -11,13 +11,14 @@
 <body>
   <header class="header header--home">
 
-    <!-- Menu principal -->
+    <!-- popovertarget relie le bouton au menu et permet son ouverture sans JavaScript. -->
     <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
       🍔
     </button>
 
+    <!-- popover masque le menu par défaut et gère sa fermeture avec Échap ou un clic extérieur. -->
     <nav class="menu" id="menu" popover aria-label="Main menu">
-      <!-- Bouton de fermeture du menu -->
+      <!-- autofocus place le focus ici à l'ouverture ; popovertargetaction="hide" ferme le menu. -->
       <button
         class="menu__close burger burger--close"
         type="button"
