@@ -8,7 +8,7 @@
   border: 0;
   margin: 0;
   padding: 4rem 1.5rem 1.5rem;
-  background: #f4f4f4;
+  background: #fffaf3;
   opacity: 0;
   transition: 400ms allow-discrete;
 }
@@ -35,6 +35,13 @@ html:has(.menu:popover-open) {
 /* Le curseur indique que les boutons burger sont cliquables. */
 .burger {
   cursor: pointer;
+  border: 0;
+  border-radius: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  color: #fff;
+  background: #6b3f9b;
+  font: inherit;
+  font-size: 1.25rem;
 }
 
 /* Positionne le bouton de fermeture dans le coin supérieur droit du menu. */
@@ -66,10 +73,52 @@ html:has(.menu:popover-open) {
   padding: 0;
 }
 
+.menu__list ul {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding-left: 1.75rem;
+}
+
+.menu > h4 {
+  margin: 0 0 1.5rem;
+  color: #6b3f9b;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+nav > h4::before,
+nav > ul > li > a::before,
+nav > ul > li > ul > li > a::before {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.65rem;
+  vertical-align: -0.2rem;
+}
+
+nav > h4::before {
+  content: url("../public/icones/book.svg");
+}
+
+nav > ul > li > a::before {
+  content: url("../public/icones/bag-plus.svg");
+}
+
+nav > ul > li > ul > li > a::before {
+  content: url("../public/icones/archive.svg");
+}
+
 .menu__link {
   color: #111;
   font-size: 1.5rem;
   text-decoration: none;
+}
+
+.menu__list ul .menu__link {
+  color: #555;
+  font-size: 1.1rem;
 }
 
 /* Respecte la préférence système pour limiter les animations. */
@@ -78,4 +127,79 @@ html:has(.menu:popover-open) {
   .menu .burger--close {
     transition: none;
   }
+}
+
+/* --- pages et galeries --------------------------------------------------- */
+body {
+  margin: 0;
+  color: #242424;
+  background: #f7f5f2;
+  font-family: system-ui, sans-serif;
+}
+
+.site-header {
+  min-height: 3.5rem;
+  padding: 1rem max(1.5rem, calc((100% - 70rem) / 2));
+  background: #fff;
+}
+
+.gallery {
+  width: min(100% - 3rem, 70rem);
+  margin: 3rem auto;
+}
+
+.gallery h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.intro {
+  max-width: 42rem;
+  margin-top: 0;
+  color: #555;
+}
+
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  align-items: start;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 0.2rem 1rem #00000012;
+}
+
+.card__image-link {
+  display: block;
+}
+
+.media--fullwidth {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card h2,
+.card p {
+  margin: 1rem 1.25rem;
+}
+
+.card p {
+  margin-top: -0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.card a:focus-visible,
+.menu a:focus-visible,
+.burger:focus-visible {
+  outline: 3px solid #6b3f9b;
+  outline-offset: 3px;
 }

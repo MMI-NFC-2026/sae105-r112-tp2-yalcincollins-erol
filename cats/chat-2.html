@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat 2 — Galerie de chats</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <button class="burger" type="button" popovertarget="menu" aria-label="Ouvrir le menu">
+      ☰
+    </button>
+    <nav class="menu" id="menu" popover aria-label="Navigation principale">
+      <button class="menu__close burger burger--close" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Fermer le menu" autofocus>×</button>
+      <h4>Menu</h4>
+      <ul class="menu__list">
+        <li>
+          <a class="menu__link" href="../index.html">Les chats</a>
+          <ul>
+            <li><a class="menu__link" href="chat-1.html">Chat 1</a></li>
+            <li><a class="menu__link" href="chat-2.html" aria-current="page">Chat 2</a></li>
+          </ul>
+        </li>
+        <li><a class="menu__link" href="../dogs/index.html">Les chiens</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="gallery">
+    <h1>Chat 2 — Chat dans la neige</h1>
+    <ul class="gallery__list">
+      <li class="card">
+        <a class="card__image-link" href="https://commons.wikimedia.org/wiki/File:Felis_catus-cat_on_snow.jpg" target="_blank" rel="noopener noreferrer">
+          <img class="media--fullwidth" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/960px-Felis_catus-cat_on_snow.jpg?utm_source=commons.wikimedia.org" alt="Chat domestique dans la neige" loading="lazy">
+        </a>
+        <h2>Chat dans la neige</h2>
+        <p>Photo : Von.grzanka — <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+      </li>
+    </ul>
+    <p><a href="../index.html">Retour à la galerie des chats</a></p>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerie de chiens</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <button class="burger" type="button" popovertarget="menu" aria-label="Ouvrir le menu">
+      ☰
+    </button>
+    <nav class="menu" id="menu" popover aria-label="Navigation principale">
+      <button
+        class="menu__close burger burger--close"
+        type="button"
+        popovertarget="menu"
+        popovertargetaction="hide"
+        aria-label="Fermer le menu"
+        autofocus
+      >
+        ×
+      </button>
+      <h4>Menu</h4>
+      <ul class="menu__list">
+        <li>
+          <a class="menu__link" href="../index.html">Les chats</a>
+          <ul>
+            <li><a class="menu__link" href="../cats/chat-1.html">Chat 1</a></li>
+            <li><a class="menu__link" href="../cats/chat-2.html">Chat 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="menu__link" href="index.html" aria-current="page">Les chiens</a>
+          <ul>
+            <li><a class="menu__link" href="labrador-de-sauvetage.html">Labrador de sauvetage</a></li>
+            <li><a class="menu__link" href="labrador-retriever.html">Labrador retriever</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="gallery">
+    <h1>Les chiens</h1>
+    <p class="intro">Quelques photos de chiens trouvées sur Wikimedia Commons. Cliquez sur une image pour consulter sa fiche et sa licence.</p>
+
+    <ul class="gallery__list">
+      <li class="card" id="chien-1">
+        <a class="card__image-link" href="https://commons.wikimedia.org/wiki/File:DSC09611a_Search_and_Rescue_Dog,_Austrian_Red_Cross_Perchtoldsdorf,_2024-10.jpg" target="_blank" rel="noopener noreferrer">
+          <img class="media--fullwidth" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/DSC09611a_Search_and_Rescue_Dog%2C_Austrian_Red_Cross_Perchtoldsdorf%2C_2024-10.jpg/960px-DSC09611a_Search_and_Rescue_Dog%2C_Austrian_Red_Cross_Perchtoldsdorf%2C_2024-10.jpg?utm_source=commons.wikimedia.org" alt="Jeune labrador noir, chien de recherche et de sauvetage" loading="lazy">
+        </a>
+        <h2>Labrador de sauvetage</h2>
+        <p>Photo : Aciarium — <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
+      </li>
+      <li class="card" id="chien-2">
+        <a class="card__image-link" href="https://commons.wikimedia.org/wiki/File:Labrador_Retriever_-_Yellow.JPG" target="_blank" rel="noopener noreferrer">
+          <img class="media--fullwidth" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Labrador_Retriever_-_Yellow.JPG/960px-Labrador_Retriever_-_Yellow.JPG?utm_source=commons.wikimedia.org" alt="Labrador retriever jaune assis dans l'herbe" loading="lazy">
+        </a>
+        <h2>Labrador retriever</h2>
+        <p>Photo : Skansken — <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></p>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>
